@@ -1,0 +1,20 @@
+{
+  "name": "blackdot-template",
+  "homepage": "https://github.com/BlackDotUnionOrg/template",
+  "authors": [
+    "diosmosis <benaka@piwik.pro>"
+  ],
+  "description": "SquareSpace template for BlackDotUnion.",
+  "main": "",
+  "moduleType": [],
+  "license": "None",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}
