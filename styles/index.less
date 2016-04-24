@@ -55,6 +55,10 @@ body {
     display: none;
 }
 
+#headerNav {
+    z-index: 1100;
+}
+
 #sidecarNav {
     display: none;
 }
@@ -288,10 +292,17 @@ body {
         margin-bottom: -76px;
     }
 
-    // the z-index for elements that overlap w/ the gallery padding must be higher than
-    // the z-index for the galler, otherwise they may not be shown
     .sqs-block:not(.sqs-block-gallery) {
+        // the z-index for elements that overlap w/ the gallery padding must be higher than
+        // the z-index for the galler, otherwise they may not be shown
         z-index: 1001;
+
+        // workaround strange indent effect that occurs when using negative margins
+        // excessively. setting to position: relative displays the element but indented.
+        // setting to position: static shows the text where it would be if there is no
+        // margin. using position: absolute w/ no top/left/right/bottom puts it in the
+        // correct location.
+        position: absolute;
     }
 }
 
