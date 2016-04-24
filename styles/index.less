@@ -283,7 +283,7 @@ body {
         .white-bg-button();
     }
 
-    .col {
+    .col > * {
         position: relative;
     }
 
@@ -294,7 +294,7 @@ body {
         background-color: black;
         padding: 46px 0 24px;
         margin-right: 26px;
-        margin-bottom: -60px;
+        margin-bottom: 0px;
 
         clear: none; // necessary if an element above has float, otherwise rows will no longer align
     }
@@ -303,15 +303,6 @@ body {
         // the z-index for elements that overlap w/ the gallery padding must be higher than
         // the z-index for the galler, otherwise they may not be shown
         z-index: 1001;
-    }
-
-    .sqs-block-gallery ~ :not(.sqs-block-gallery) {
-        // workaround strange indent effect that occurs when using negative margins
-        // excessively. setting to position: relative displays the element but indented.
-        // setting to position: static shows the text where it would be if there is no
-        // margin. using position: absolute w/ no top/left/right/bottom puts it in the
-        // correct location.
-        position: absolute;
     }
 
     // another workaround: squarespace will set the top padding to 0 for the first element
