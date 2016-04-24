@@ -313,6 +313,18 @@ body {
         // correct location.
         position: absolute;
     }
+
+    // another workaround: squarespace will set the top padding to 0 for the first element
+    // of a row, except when the element is floating. in the event section, this means the
+    // third column will have no padding-top, but the second column, which has a float
+    // element at the top, will have a padding-top. this screws up the alignment of
+    // the two columns. we fix it by setting the padding-top of first floating elements to
+    // 0, as well as the element that immediately follows it
+    .sqs-layout:not(.sqs-editing) .sqs-row .sqs-block.float:first-child {
+        &, & + * {
+            padding-top: 0;
+        }
+    }
 }
 
 #event .sqs-layout .sqs-row .sqs-col:not(:nth-child(1)) {
