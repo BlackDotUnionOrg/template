@@ -67,6 +67,10 @@ body {
 	position: relative;
 }
 
+.page-content {
+	z-index: 1000; // must be high or editing in squarespace is impossible
+}
+
 #home {
 	.page-content {
 		h1, h3 {
@@ -75,7 +79,6 @@ body {
 
 		position: absolute;
 		top: 111px;
-		z-index: 1000; // must be high or editing in squarespace is impossible
 	}
 
 	.sqs-block-button-element {
