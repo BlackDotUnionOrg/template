@@ -61,16 +61,24 @@ body {
 }
 
 #home {
+	position: relative;
+
 	.page-content {
-		margin-top: -402px;
+		position: absolute;
+		top: -402px;
+		z-index: 1;
 	}
 
 	.sqs-block-button-element {
 		font-family: Roboto;
-		font-size: 13px;
+		font-size: 14px;
 		color: #ffffff;
 		text-align: center;
 		padding: 12px 32px;
+
+		background:#000000;
+		box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
+		border-radius:2px;
 	}
 }
 
