@@ -281,11 +281,17 @@ body {
     .sqs-block-gallery {
         position: relative;
         top: -76px;
-        z-index: -1;
         border-radius: 15px;
         background-color: black;
         padding: 46px 0 24px;
         margin-right: 26px;
+        margin-bottom: -76px;
+    }
+
+    // the z-index for elements that overlap w/ the gallery padding must be higher than
+    // the z-index for the galler, otherwise they may not be shown
+    .sqs-block:not(.sqs-block-gallery) {
+        z-index: 1001;
     }
 }
 
@@ -312,7 +318,6 @@ body {
 /*Coming Soon Block*/
 #block-yui_3_17_2_2_1460500836987_27999 {
   max-height: 300px;
-  margin-bottom: 30px;
 }
 
 /**/
@@ -330,19 +335,7 @@ body {
   }
 }
 
-/*Event - Coming Soon and Button*/
-
-#block-yui_3_17_2_2_1460497275867_41789 {
-  top: 60px;
-
-}
-
 /*Event - innard position*/
-#page-570d63d82fe13185ab987a84 {
-//  position: relative;
-//  top: -780px;  
-}
-
 /*END EVENT*/
 /*PEOPLE*/
 #people{
