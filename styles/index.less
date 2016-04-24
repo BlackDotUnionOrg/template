@@ -296,7 +296,9 @@ body {
         // the z-index for elements that overlap w/ the gallery padding must be higher than
         // the z-index for the galler, otherwise they may not be shown
         z-index: 1001;
+    }
 
+    .sqs-block-gallery ~ :not(.sqs-block-gallery) {
         // workaround strange indent effect that occurs when using negative margins
         // excessively. setting to position: relative displays the element but indented.
         // setting to position: static shows the text where it would be if there is no
