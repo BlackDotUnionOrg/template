@@ -258,6 +258,7 @@ body {
     background:#000000;
     box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
     width:111px;
+
     height:42px;
   }
 }
@@ -294,6 +295,8 @@ body {
         padding: 46px 0 24px;
         margin-right: 26px;
         margin-bottom: -76px;
+
+        clear: none; // necessary if an element above has float, otherwise rows will no longer align
     }
 
     .sqs-block:not(.sqs-block-gallery) {
