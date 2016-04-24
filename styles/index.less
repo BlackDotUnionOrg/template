@@ -59,16 +59,18 @@ body {
 	display: none;
 }
 
+.page-content {
+	z-index: 1000; // must be high or editing in squarespace is impossible
+}
+
 .content-inner {
 	position: relative;
+
+	z-index: 1001;
 }
 
 .index-section {
 	position: relative;
-}
-
-.page-content {
-	z-index: 1000; // must be high or editing in squarespace is impossible
 }
 
 #home {
