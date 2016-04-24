@@ -71,7 +71,7 @@ body {
 	position: relative;
 }
 
-.white-bg-button() { // TODO: move mixins elsewhere
+.black-bg-button() { // TODO: move mixins elsewhere
 	font-family: Roboto;
 	font-size: 14px;
 	color: #ffffff;
@@ -81,6 +81,21 @@ body {
 	background:#000000;
 	box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
 	border-radius:2px;
+}
+
+.white-bg-button() {
+	background-color: #fff;
+	border:1px solid #3a3a3a;
+	box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
+	border-radius:2px;
+
+    padding: 12px 20px;
+
+    font-family:Roboto;
+    font-weight:400;
+	font-size:13px;
+	color:#000000;
+	text-align:center;
 }
 
 #home {
@@ -94,7 +109,7 @@ body {
 	}
 
 	.sqs-block-button-element {
-		.white-bg-button();
+		.black-bg-button();
 	}
 }
 
@@ -136,18 +151,7 @@ body {
 	}
 
     .sqs-block-button-element {
-    	background-color: #fff;
-		border:1px solid #3a3a3a;
-		box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
-		border-radius:2px;
-
-	    padding: 12px 20px;
-
-	    font-family:Roboto;
-	    font-weight:400;
-		font-size:13px;
-		color:#000000;
-		text-align:center;
+    	.white-bg-button();
     }
 }
 
