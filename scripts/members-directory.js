@@ -80,7 +80,7 @@ function gopaywall_loaded() {
             + ''
             + '<div id="members" class="membership-card-view">'
             + '    <div class="loading-container">'
-            + '        <img src="images/loading.svg"/>'
+            + '        <img src="/assets/images/loading.svg"/>'
             + '    </div>'
             + '</div>';
 
