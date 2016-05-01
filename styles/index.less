@@ -407,6 +407,37 @@ body {
   position: relative;
 }
 
+// people section
+#people {
+    overflow: hidden;
+
+    // meet the founders column
+    .meet-the-founders-bgnd {
+        position: absolute;
+        width: 1046px;
+        height: 1046px;
+        overflow: hidden;
+        background-color: black;
+        border-radius: 50%;
+        right: -50%;
+    }
+
+    // fragile selector for meet the founders text
+    .sqs-block-content {
+        > h3:first-child {
+            color: #fff;
+            font-size: 19px;
+        }
+
+        > h3 ~ p {
+            color: #fff;
+            font-size: 13.34px;
+        }
+    }
+}
+
+
+
 #block-yui_3_17_2_6_1460429358231_19440, #block-yui_3_17_2_2_1460500836987_42009 {
   border-radius: 15px;
   background-color: black;
@@ -438,19 +469,13 @@ body {
 /*END EVENT*/
 /*PEOPLE*/
 #people #block-yui_3_17_2_4_1460567398021_11888 {
-  //outline: 5px solid green;
-
   img{
     margin-left: 0px;
   }
-
 }
-
-
 
 #people .sqs-col-8 [data-block-type='5']{
   width: 110.4%;
-
 }
 
 
@@ -469,7 +494,6 @@ body {
 #people .sqs-row .col.span-7 {
   position: relative;
   left: 93px;
-
 }
 
 #block-yui_3_17_2_4_1460567398021_11888{
