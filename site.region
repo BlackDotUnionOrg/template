@@ -8,6 +8,7 @@
     {squarespace-headers}
     <script>/* Must be below squarespace-headers */(function(){var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
     </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <squarespace:script src="jquery/dist/jquery.min.js" combo="true" />
     <squarespace:script src="dom-annotator.js" combo="true" />
   </head>
