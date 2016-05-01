@@ -86,20 +86,32 @@ body {
     z-index: 1000; // must be high or editing in squarespace is impossible
 
     .section-title {
-        background: #000000;
-        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
+        position: relative;
+        overflow: hidden;
         width: 179px;
         height: 179px;
-        border-radius: 100%;
 
         font-size: 20px;
         color: #ffffff;
-        text-indent: 57px;
+        text-align: center;
 
         &::before { // used to shove text down
             content: "";
             display: block;
-            height: 122px;
+            height: 127px;
+        }
+
+        &::after { // background circle
+            background: #000000;
+            box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
+            border-radius: 100%;
+
+            width: 179px;
+            height: 179px;
+
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
 }
