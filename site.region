@@ -12,7 +12,6 @@
     <squarespace:script src="jquery/dist/jquery.min.js" combo="true" />
     <squarespace:script src="mustache.js/mustache.min.js" combo="true" />
     <squarespace:script src="remodal/dist/remodal.min.js" combo="true" />
-    <squarespace:script src="crypto-js/crypto-js.js" combo="true" />
     <squarespace:script src="dom-annotator.js" combo="true" />
     <squarespace:script src="members-directory.js" combo="true" />
   </head>
