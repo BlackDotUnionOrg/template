@@ -10,6 +10,9 @@
     </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <squarespace:script src="jquery/dist/jquery.min.js" combo="true" />
+    <squarespace:script src="mustache.js/dist/mustache.min.js" combo="true" />
+    <squarespace:script src="remodal/remodal.min.js" combo="true" />
+    <squarespace:script src="crypto-js/crypto-js.js" combo="true" />
     <squarespace:script src="dom-annotator.js" combo="true" />
   </head>
 
