@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <squarespace:script src="jquery/dist/jquery.min.js" combo="true" />
     <squarespace:script src="mustache.js/mustache.min.js" combo="true" />
+    <squarespace:script src="remodal/dist/remodal.min.js" combo="true" />
+    <squarespace:script src="crypto-js/crypto-js.js" combo="true" />
     <squarespace:script src="dom-annotator.js" combo="true" />
+    <squarespace:script src="members-directory.js" combo="true" />
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if item}{.section item}{.if productType}{.or}{.main-image?} has-banner-image item-main-image{.end}{.end}{.end}{.or}{.section collection}{.collectionTypeNameEquals? index}{.section collections}{.section 0}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}">

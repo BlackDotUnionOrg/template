@@ -43,7 +43,7 @@ function gopaywall_loaded() {
 
             oldest_first: function (a, b) {
                 return compareValues(b.membership_id, a.membership_id);
-            },
+            }
         };
 
         var allMembers,
