@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <squarespace:script src="jquery/dist/jquery.min.js" combo="true" />
     <squarespace:script src="mustache.js/mustache.min.js" combo="true" />
-    <squarespace:script src="remodal/dist/remodal.min.js" combo="true" />
     <squarespace:script src="dom-annotator.js" combo="true" />
     <squarespace:script src="members-directory.js" combo="true" />
   </head>
