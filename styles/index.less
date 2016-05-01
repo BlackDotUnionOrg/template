@@ -120,7 +120,12 @@ body {
 
   blockquote {
     text-align: left;
-    > span:first-child, > span:last-child {
+
+    > span {
+      display: none !important;
+    }
+
+    &::before, &::after {
       display: inline-block;
       font-size: 64px;
       color: black;
@@ -128,8 +133,13 @@ body {
       font-family: "Times New Roman", serif;
     }
 
-    > span:first-child {
+    &::before {
       margin-right: 26px;
+      content: "\201c";
+    }
+
+    &::after {
+      content: "\201d";
     }
   }
 
