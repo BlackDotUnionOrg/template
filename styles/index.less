@@ -86,10 +86,11 @@ body {
     z-index: 1000; // must be high or editing in squarespace is impossible
 
     .section-title {
-        position: relative;
-        overflow: hidden;
+        background: #000000;
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
         width: 179px;
         height: 179px;
+        border-radius: 100%;
 
         font-size: 20px;
         color: #ffffff;
@@ -99,22 +100,6 @@ body {
             content: "";
             display: block;
             height: 127px;
-        }
-
-        &::after { // background circle
-            content: "";
-            display: block;
-
-            background: #000000;
-            box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
-            border-radius: 100%;
-
-            width: 179px;
-            height: 179px;
-
-            position: absolute;
-            right: 0;
-            top: 0;
         }
     }
 }
