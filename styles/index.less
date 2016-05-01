@@ -116,14 +116,6 @@ body {
   figure {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  blockquote {
-    text-align: left;
-
-    > span {
-      display: none !important;
-    }
 
     &::before, &::after {
       display: inline-block;
@@ -140,6 +132,14 @@ body {
 
     &::after {
       content: "\201d";
+    }
+  }
+
+  blockquote {
+    text-align: left;
+
+    > span {
+      display: none !important;
     }
   }
 
