@@ -16,5 +16,8 @@
     "vendor/assets/components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.1"
+  }
 }
