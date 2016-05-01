@@ -111,13 +111,14 @@ body {
   position: relative;
   padding-bottom: 21px;
 
-  blockquote{
+  blockquote {
     text-align: left;
-    span{
+    > span:first-child, > span:last-child {
+      display: inline-block;
       font-size: 64px;
       color: black;
       opacity: 1;
-    }  
+    }
   }
 
   figcaption.source {
