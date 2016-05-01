@@ -58,8 +58,14 @@ body {
   }
 }
 
-.sqs-block-spacer .sqs-block-content {
-  font-size: 0;
+.sqs-block-spacer {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .sqs-block-content {
+        font-size: 0;
+        height: 0;
+    }
 }
 
 // remove logo image when displaying nav as fixed to top of window (during page scroll)
