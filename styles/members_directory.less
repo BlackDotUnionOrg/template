@@ -60,6 +60,10 @@
         color:#cdcdcd;
         display: block;
     }
+
+    &:hover {
+      color: @linkHoverColor;
+    }
 }
 
 #member-sort {
@@ -222,10 +226,14 @@
 .member > .contact-info a {
     color: #fff;
     text-decoration: none;
-}
 
-.member > .contact-info a:visited {
-    color: #fff;
+    &:visited {
+        color: #fff;
+    }
+
+    &:hover {
+      color: @linkHoverColor;
+    }
 }
 
 .member > .contact-info h4 {
