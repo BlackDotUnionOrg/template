@@ -131,6 +131,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 12px 32px;
+    letter-spacing: 0.25px;
 
     background:#000000;
     box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
@@ -217,12 +218,7 @@ body {
 
 .sqs-block-button {
     &.sqs-block-button-element,&.sqs-block-button-element--medium {
-        background:#000000;
-        box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
-        border-radius:2px;
-        a {
-            letter-spacing: 0.25px;
-        }
+        .black-bg-button();
     }
 }
 
@@ -234,10 +230,6 @@ body {
 
         position: absolute;
         top: 111px;
-    }
-
-    .sqs-block-button-element {
-        .black-bg-button();
     }
 }
 
