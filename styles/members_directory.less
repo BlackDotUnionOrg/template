@@ -97,6 +97,10 @@
     font-size: 0;
     background-color: transparent;
     border-width:0;
+
+    &:hover::before {
+        color: @linkHoverColor;
+    }
 }
 
 #search-filter button:focus {
@@ -116,10 +120,6 @@
     background-color:#000;
 
     border-radius:50%;
-
-    &:hover {
-        color: @linkHoverColor;
-    }
 }
 
 /* member card styles */
