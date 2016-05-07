@@ -17,20 +17,22 @@ body.collection-type-page {
 
         #headerNav {
             width: @pageSideHeaderWidth;
-        }
 
-        a {
-            font-family: Roboto, sans-serif;
-            font-size: 18px;
-            color: #4a4a4a;
-            line-height: 1.1em;
-            font-weight: 400;
+            nav {
+                a {
+                    font-family: Roboto, sans-serif;
+                    font-size: 18px;
+                    color: #4a4a4a;
+                    line-height: 1.1em;
+                    font-weight: 400;
+                }
 
-            &.active {
-                .active-nav-dot();
+                .active a {
+                    .active-nav-dot();
 
-                color: #000;
-                font-weight: 600;
+                    color: #000;
+                    font-weight: 600;
+                }
             }
         }
     }
