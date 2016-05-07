@@ -93,13 +93,13 @@
   transform-origin:    		  @x @y;
 }
 
-.active-nav-dot () {
+.active-nav-dot (@dotColor) {
     &::before {
         content: "";
         width: .725em;
         height: .75em;
         border-radius: 100%;
-        background-color:@navActiveColor;
+        background-color:@dotColor;
         display: inline-block;
     }
 }
