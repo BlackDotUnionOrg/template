@@ -62,14 +62,7 @@ body.homepage {
           color:@navActiveColor;
           font-weight: 700;
 
-          &::before {
-            content: "";
-            width: .725em;
-            height: .75em;
-            border-radius: 100%;
-            background-color:@navActiveColor;
-            display: inline-block;
-          }
+          .active-nav-dot();
         }
       }
       .subnav{
