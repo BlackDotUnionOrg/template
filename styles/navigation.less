@@ -8,15 +8,28 @@
     .nav-font;
     line-height: 1em;
     color: @navColor;
+    font-weight: 300;
+
     &:hover {
       color: @linkHoverColor;
     }
   }
-  .active{
+
+  .active {
     > a,
     > a:visited,
-    > label{
+    > label {
       color:@navActiveColor;
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        border-radius: 100%;
+        background-color:@navActiveColor;
+        display: inline-block;
+      }
     }
   }
   .subnav{
