@@ -433,6 +433,9 @@ body {
         // the z-index for elements that overlap w/ the gallery padding must be higher than
         // the z-index for the galler, otherwise they may not be shown
         z-index: 1001 !important;
+        &[class*=float] {
+            z-index: 1002 !important;
+        }
     }
 
     // another workaround: squarespace will set the top padding to 0 for the first element
