@@ -64,7 +64,7 @@ body.homepage {
       }
 
       // TODO: separate homepage nav styles from normal page styles, and put in separate file
-      body { // TODO: re-add when doing mobile: :not(.force-mobile-nav) {
+      // TODO: re-add when doing mobile: &:not(.force-mobile-nav) {
         #headerNav {
           white-space: nowrap;
         }
@@ -99,63 +99,7 @@ body.homepage {
           bottom: 100%;
           .transform-origin(0, 100%);
         }
-      }
 
-      html:not(.touch-styles) body /* TODO: re-add when doing mobile styles: :not(.force-mobile-nav) */ .nav-wrapper {
-        .folder .subnav {
-          text-align: left;
-          padding: 1em 0;
-          display: inline-block;
-          position: absolute;
-          top: 100%;
-          left: -0.5em;
-          z-index: 1000;
-          font-size: @nav-font-font-size;
-          .border-box;
-          white-space: nowrap;
-          .scale(1, 0);
-          .transform-origin(0, 0);
-          -webkit-transition: -webkit-transform 0.14s 0s ease-in-out;
-          -moz-transition: -moz-transform 0.14s 0s ease-in-out;
-          -ms-transition: -ms-transform 0.14s 0s ease-in-out;
-          -o-transition: -o-transform 0.14s 0s ease-in-out;
-          transition: transform 0.14s 0s ease-in-out;
-          > div {
-            opacity: 0;
-            padding: 0;
-            .transition(opacity 0.05s 0.0s ease-in-out);
-            a {
-              display: block;
-              padding: 0.5em 1.5em;
-              -webkit-transform: translatez(0);
-              -moz-transform: translatez(0);
-              -ms-transform: translatez(0);
-              -o-transform: translatez(0);
-              transform: translatez(0);
-            }
-          }
-
-          &.right {
-            left: auto;
-            right: -.5em;
-          }
-        }
-        .folder:hover {
-          .subnav {
-            .scale(1, 1);
-            > div {
-              opacity: 1;
-              .transition(opacity 0.14s 0.14s ease-in-out);
-            }
-          }
-        }
-      }
-      // only right align last folder if not sidecar nav
-      html:not(.touch-styles) body /* TODO: re-enable when doing mobile styles :not(.force-mobile-nav) */ #siteWrapper .nav-wrapper .folder:last-child .subnav {
-        text-align: right;
-        right: -1.5em;
-        left: auto;
-      }
     // } (for @media above)
 
     // folder indicator everywhere in mobile style nav
@@ -680,3 +624,61 @@ body.homepage {
       display: none;
     }
 }
+
+// TODO: re-add when doing mobile: &:not(.force-mobile-nav) {
+html:not(.touch-styles) body.homepage /* TODO: re-add when doing mobile styles: :not(.force-mobile-nav) */ .nav-wrapper {
+    .folder .subnav {
+        text-align: left;
+        padding: 1em 0;
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        left: -0.5em;
+        z-index: 1000;
+        font-size: @nav-font-font-size;
+        .border-box;
+        white-space: nowrap;
+        .scale(1, 0);
+        .transform-origin(0, 0);
+        -webkit-transition: -webkit-transform 0.14s 0s ease-in-out;
+        -moz-transition: -moz-transform 0.14s 0s ease-in-out;
+        -ms-transition: -ms-transform 0.14s 0s ease-in-out;
+        -o-transition: -o-transform 0.14s 0s ease-in-out;
+        transition: transform 0.14s 0s ease-in-out;
+        > div {
+            opacity: 0;
+            padding: 0;
+            .transition(opacity 0.05s 0.0s ease-in-out);
+            a {
+                display: block;
+                padding: 0.5em 1.5em;
+                -webkit-transform: translatez(0);
+                -moz-transform: translatez(0);
+                -ms-transform: translatez(0);
+                -o-transform: translatez(0);
+                transform: translatez(0);
+            }
+        }
+
+        &.right {
+            left: auto;
+            right: -.5em;
+        }
+    }
+    .folder:hover {
+        .subnav {
+            .scale(1, 1);
+            > div {
+                opacity: 1;
+                .transition(opacity 0.14s 0.14s ease-in-out);
+            }
+        }
+    }
+}
+// only right align last folder if not sidecar nav
+html:not(.touch-styles) body.homepage /* TODO: re-enable when doing mobile styles :not(.force-mobile-nav) */ #siteWrapper .nav-wrapper .folder:last-child .subnav {
+    text-align: right;
+    right: -1.5em;
+    left: auto;
+}
+// } (for @media above)
