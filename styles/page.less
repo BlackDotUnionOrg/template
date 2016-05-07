@@ -1,17 +1,26 @@
+@pageSideHeaderWidth: 230px;
+
 body.collection-type-page {
     #header {
         background-color: transparent;
         padding: 0;
 
         #logoWrapper {
-            width: 230px;
-            text-align: center;
+            width: @pageSideHeaderWidth;
+
+            > #logoImage {
+                margin: 0 auto;
+            }
+        }
+
+        #headerNav {
+            width: @pageSideHeaderWidth;
         }
     }
 
     #page {
         padding-left: 0;
         padding-right: 0;
-        margin-left: 230px;
+        margin-left: @pageSideHeaderWidth;
     }
 }
