@@ -105,7 +105,7 @@
 @pageWidth: 1020px;
 @pageWidthNarrow: 700px;
 @galleryHeight: 600px;
-
+@linkHoverColor: #4A90E2;
 
 // Mixins
 .max-letter-spacing (@spacing,@max) when (@spacing > @max) {
@@ -248,6 +248,10 @@ body {
 a {
   text-decoration: none;
   color: @pageTextColor;
+
+  &:hover {
+    color: @linkHoverColor;
+  }
 }
 
 .sqs-lightbox-meta a {
