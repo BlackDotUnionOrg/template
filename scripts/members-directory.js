@@ -78,6 +78,8 @@ function gopaywall_loaded() {
             + '    </div>'
             + '</div>'
             + ''
+            + '<div id="member-filters-spacer"/>'
+            + ''
             + '<div id="members" class="membership-card-view">'
             + '    <div class="loading-container">'
             + '        <img src="/assets/images/loading.svg"/>'
@@ -119,6 +121,7 @@ function gopaywall_loaded() {
             $('#member-sort').change(handleMemberSortChange);
 
             $('body').on('click', '#members[data-filter-type=list] .member', launchMemberCardModal);
+            $('body').on('scroll', affixMemberFiltersWhenScrollingPast);
         }
 
         function getMembersData(callback) {
@@ -326,6 +329,28 @@ function gopaywall_loaded() {
             }
 
             $target.closest('.member').clone().remodal().open();
+        }
+
+        function affixMemberFiltersWhenScrollingPast() {
+            var $memberFilters = $('#member-filters'),
+                $memberFiltersSpacer = $('#member-filters-spacer');
+            if (this.scrollTop > $memberFilters.offset().top) { // start scrolling
+                $memberFiltersSpacer
+                    .css({width: $memberFilters.width(), height: $memberFilters.height()})
+                    .addClass('active');
+
+                $memberFilters
+                    .css({width: $memberFilters.width(), height: $memberFilters.height()})
+                    .addClass('fixed');
+            } else { // stop scrolling
+                $memberFiltersSpacer
+                    .removeAttr('style')
+                    .removeClass('active');
+
+                $memberFilters
+                    .removeAttr('style')
+                    .removeClass('fixed');
+            }
         }
 
         // utility functions
