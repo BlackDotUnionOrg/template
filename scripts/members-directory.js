@@ -320,7 +320,12 @@ function gopaywall_loaded() {
 
         // launches full card modal when the list view is clicked
         function launchMemberCardModal(event) {
-            $(event.target).closest('.member').clone().remodal().open();
+            var $target = $(event.target);
+            if ($target.is('a')) {
+                return;
+            }
+
+            $target.closest('.member').clone().remodal().open();
         }
 
         // utility functions
