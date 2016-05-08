@@ -25,7 +25,7 @@
       <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
     </div>
     <div id="siteWrapper" class="clearfix">
-      <img class="site-background"/>
+      <div class="site-background"/>
 
       <div class="sqs-cart-dropzone"></div>
 
