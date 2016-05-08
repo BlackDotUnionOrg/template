@@ -333,13 +333,13 @@ function gopaywall_loaded() {
 
         function affixMemberFiltersWhenScrollingPast() {
             console.log("scrolling");
-            console.log(this.scrollTop);
+            console.log($(window).scrollTop());
             var $memberFilters = $('#member-filters'),
                 $memberFiltersSpacer = $('#member-filters-spacer'),
                 $originalPlace = $memberFiltersSpacer.hasClass('active') ? $memberFiltersSpacer : $memberFilters;
             console.log($originalPlace.offset().top);
 
-            if (this.scrollTop > $originalPlace.offset().top) { // start scrolling
+            if ($(window).scrollTop() > $originalPlace.offset().top) { // start scrolling
                 $memberFiltersSpacer
                     .css({width: $memberFilters.width(), height: $memberFilters.height()})
                     .addClass('active');
