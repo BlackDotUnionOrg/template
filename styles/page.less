@@ -1,6 +1,8 @@
 @pageSideHeaderWidth: 230px;
 
-body.collection-type-page {
+// TODO: this should be the default style, and the top link should override for .homepage. due to bedford's css,
+// implementing this would take a long time.
+body:not(.homepage) {
     #header {
         background-color: transparent;
         padding: 0;
