@@ -121,7 +121,9 @@ function gopaywall_loaded() {
             $('#member-sort').change(handleMemberSortChange);
 
             $('body').on('click', '#members[data-filter-type=list] .member', launchMemberCardModal);
+
             $(window).on('scroll', affixMemberFiltersWhenScrollingPast);
+            $(window).on('resize', changeMemberFilterSizeIfScrolling);
         }
 
         function getMembersData(callback) {
@@ -353,6 +355,18 @@ function gopaywall_loaded() {
                     .removeAttr('style')
                     .removeClass('fixed');
             }
+        }
+
+        function changeMemberFilterSizeIfScrolling() {
+            var $memberFilters = $('#member-filters');
+            if (!$memberFilters.hasClass('fixed')) {
+                return;
+            }
+
+            var $membersDirectory = $('#members-directory');
+
+            $memberFilters.css({width: $membersDirectory.width()});
+            $('#member-filters-spacer').css({width: $membersDirectory.width()});
         }
 
         // utility functions
