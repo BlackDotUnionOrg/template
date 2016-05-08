@@ -334,6 +334,7 @@ function gopaywall_loaded() {
         }
 
         function affixMemberFiltersWhenScrollingPast() {
+            console.log("HERE");
             var $memberFilters = $('#member-filters'),
                 $memberFiltersSpacer = $('#member-filters-spacer'),
                 $originalPlace = $memberFiltersSpacer.hasClass('active') ? $memberFiltersSpacer : $memberFilters;
