@@ -121,7 +121,7 @@ function gopaywall_loaded() {
             $('#member-sort').change(handleMemberSortChange);
 
             $('body').on('click', '#members[data-filter-type=list] .member', launchMemberCardModal);
-            $('body').on('scroll', affixMemberFiltersWhenScrollingPast);
+            $(window).on('scroll', affixMemberFiltersWhenScrollingPast);
         }
 
         function getMembersData(callback) {
