@@ -332,9 +332,14 @@ function gopaywall_loaded() {
         }
 
         function affixMemberFiltersWhenScrollingPast() {
+            console.log("scrolling");
+            console.log(this.scrollTop);
             var $memberFilters = $('#member-filters'),
-                $memberFiltersSpacer = $('#member-filters-spacer');
-            if (this.scrollTop > $memberFilters.offset().top) { // start scrolling
+                $memberFiltersSpacer = $('#member-filters-spacer'),
+                $originalPlace = $memberFiltersSpacer.hasClass('active') ? $memberFiltersSpacer : $memberFilters;
+            console.log($originalPlace.offset().top);
+
+            if (this.scrollTop > $originalPlace.offset().top) { // start scrolling
                 $memberFiltersSpacer
                     .css({width: $memberFilters.width(), height: $memberFilters.height()})
                     .addClass('active');
