@@ -25,8 +25,6 @@
       <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
     </div>
     <div id="siteWrapper" class="clearfix">
-      <div class="site-background"/>
-
       <div class="sqs-cart-dropzone"></div>
 
       <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
