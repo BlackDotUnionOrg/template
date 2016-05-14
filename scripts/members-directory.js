@@ -13,7 +13,13 @@ if (MEMBERS_DIR_TEST) {
         }
     };
 
-    gopaywall_loaded();
+    $(document).ready(function () {
+        if (!$('#members-directory').length) {
+            return;
+        }
+
+        gopaywall_loaded();
+    });
 }
 
 (function () {

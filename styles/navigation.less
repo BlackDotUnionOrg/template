@@ -25,10 +25,16 @@
 }
 
 body.logged_in {
-    .login-profile-link::after {
-        content: "\f007";
-        font-family: "FontAwesome";
-        display:inline-block;
-        margin-left: 8px;
+    .login-profile-link {
+        &::after {
+            content: "\f007";
+            font-family: "FontAwesome";
+            display:inline-block;
+            margin-left: 8px;
+        }
+
+        span {
+            font-size: 18px;
+        }
     }
 }
