@@ -16,14 +16,12 @@ if (MEMBERS_DIR_TEST) {
     gopaywall_loaded();
 }
 
-function gopaywall_loaded() {
-    $(document).ready(function () {
-        if (!$('#members-directory').length) {
-            return; // this is not the members page, so do nothing
-        }
+$(document).ready(function () {
+    if (!$('#members-directory').length) {
+        return; // this is not the members page, so do nothing
+    }
 
-        setUpMembersDirectory();
-    });
+    $(document).on('gopaywall:loaded', setUpMembersDirectory);
 
     function setUpMembersDirectory() {
         var memberSortCompares = {
@@ -340,20 +338,20 @@ function gopaywall_loaded() {
 
             if ($(window).scrollTop() > $originalPlace.offset().top) { // start scrolling
                 $memberFiltersSpacer
-                    .css({width: $memberFilters.width(), height: $memberFilters.height()})
-                    .addClass('active');
+                .css({width: $memberFilters.width(), height: $memberFilters.height()})
+                .addClass('active');
 
                 $memberFilters
-                    .css({width: $memberFilters.width(), height: $memberFilters.height()})
-                    .addClass('fixed');
+                .css({width: $memberFilters.width(), height: $memberFilters.height()})
+                .addClass('fixed');
             } else { // stop scrolling
                 $memberFiltersSpacer
-                    .removeAttr('style')
-                    .removeClass('active');
+                .removeAttr('style')
+                .removeClass('active');
 
                 $memberFilters
-                    .removeAttr('style')
-                    .removeClass('fixed');
+                .removeAttr('style')
+                .removeClass('fixed');
             }
         }
 
@@ -380,4 +378,4 @@ function gopaywall_loaded() {
             }
         }
     }
-}
+});
