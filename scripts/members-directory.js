@@ -16,14 +16,14 @@ if (MEMBERS_DIR_TEST) {
     gopaywall_loaded();
 }
 
-$(document).ready(function () {
-    if (!$('#members-directory').length) {
-        return; // this is not the members page, so do nothing
-    }
-
+(function () {
     $(document).on('gopaywall:loaded', setUpMembersDirectory);
 
     function setUpMembersDirectory() {
+        if (!$('#members-directory').length) {
+            return; // this is not the members page, so do nothing
+        }
+
         var memberSortCompares = {
             name: function (a, b) {
                 return compareValues(a.name, b.name);
@@ -378,4 +378,4 @@ $(document).ready(function () {
             }
         }
     }
-});
+})();

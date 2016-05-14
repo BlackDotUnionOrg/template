@@ -16,6 +16,7 @@
     <squarespace:script src="dom-annotator.js" combo="true" />
     <squarespace:script src="gopaywall.js" combo="true" />
     <squarespace:script src="members-directory.js" combo="true" />
+    <squarespace:script src="member-profile.js" combo="true" />
     <squarespace:script src="homepage.js" combo="true" />
   </head>
 
