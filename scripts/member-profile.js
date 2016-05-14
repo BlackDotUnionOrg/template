@@ -3,7 +3,7 @@ $(document).on('gopaywall:loaded', function () {
     $('.login-profile-link')
         .html($('<span>').text('Hello ' + firstName))
         .detach()
-        .appendTo($('#siteWrapper));
+        .appendTo($('#siteWrapper'));
 
     $('body').addClass('logged-in');
 });
