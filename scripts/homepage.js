@@ -30,9 +30,9 @@ $(document).ready(function () {
             }
 
             // position the dot chain
-            var centerX = $sectionStart.offset().left + ($sectionStart.outerWidth() / 2),
-                sectionStartBottom = $sectionStart.offset().top + $sectionStart.outerHeight(),
-                sectionEndTop = $sectionEnd.offset().top;
+            var centerX = $sectionStart.position().left + ($sectionStart.outerWidth() / 2),
+                sectionStartBottom = $sectionStart.position().top + $sectionStart.outerHeight(),
+                sectionEndTop = $sectionEnd.position().top;
             $dotChainElement.css({
                 top: sectionStartBottom + 'px',
                 left: (centerX - (dotChainWidth / 2)) + 'px',
