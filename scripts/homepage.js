@@ -9,7 +9,8 @@ $(document).ready(function () {
     $(window).on('resize', addDotChainSectionConnectors);
 
     function addDotChainSectionConnectors() {
-        var dotChainWidth = 18;
+        var dotChainWidth = 18,
+            $siteWrapper = $('#siteWrapper');
 
         var $sectionTitles = $('.section-title');
         $sectionTitles.each(function (index) {
@@ -30,9 +31,14 @@ $(document).ready(function () {
             }
 
             // position the dot chain
-            var centerX = $sectionStart.position().left + ($sectionStart.outerWidth() / 2),
-                sectionStartBottom = $sectionStart.position().top + $sectionStart.outerHeight(),
-                sectionEndTop = $sectionEnd.position().top;
+            var centerX = $sectionStart.offset().left + ($sectionStart.outerWidth() / 2),
+                sectionStartBottom = $sectionStart.offset().top + $sectionStart.outerHeight(),
+                sectionEndTop = $sectionEnd.offset().top;
+
+            centerX -= $siteWrapper.offset().left;
+            sectionStartBottom -= $siteWrapper.offset().top;
+            sectionEndTop = $siteWrapper.offset().top;
+
             $dotChainElement.css({
                 top: sectionStartBottom + 'px',
                 left: (centerX - (dotChainWidth / 2)) + 'px',
