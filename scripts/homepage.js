@@ -42,7 +42,7 @@ $(document).ready(function () {
             $dotChainElement.css({
                 top: sectionStartBottom + 'px',
                 left: (centerX - (dotChainWidth / 2)) + 'px',
-                bottom: sectionEndTop + 'px',
+                height: (sectionEndTop - sectionStartBottom) + 'px',
                 width: dotChainWidth + 'px'
             });
         });
