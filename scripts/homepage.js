@@ -16,11 +16,13 @@ $(document).ready(function () {
             if (index == 0) {
                 return;
             }
-console.log("INDEX: ", index);
+
             var $sectionStart = $sectionTitles[index - 1],
                 $sectionEnd = $(this),
                 $dotChainElement = $('#dot-chain-' + index);
-
+            console.log(index);
+console.log($sectionStart);
+            console.log($sectionEnd);
             // create the dot chain element if it does not already exist
             if (!$dotChainElement.length) {
                 $('<div>')
