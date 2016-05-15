@@ -16,7 +16,7 @@ $(document).ready(function () {
             if (index == 0) {
                 return;
             }
-
+console.log("INDEX: ", index);
             var $sectionStart = $sectionTitles[index - 1],
                 $sectionEnd = $(this),
                 $dotChainElement = $('#dot-chain-' + index);
