@@ -23,7 +23,7 @@ $(document).ready(function () {
 
             // create the dot chain element if it does not already exist
             if (!$dotChainElement.length) {
-                $('<div>')
+                $dotChainElement = $('<div>')
                     .addClass('dot-chain')
                     .attr('id', 'dot-chain-' + index)
                     .appendTo('#siteWrapper');
