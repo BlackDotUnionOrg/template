@@ -718,7 +718,7 @@ html:not(.touch-styles) body.homepage /* TODO: re-enable when doing mobile style
 }
 // } (for @media above)
 
-
+// login / member profile link
 body.homepage {
     .login-profile-link {
         color: #fff;
@@ -731,5 +731,16 @@ body.homepage {
 
     .show-on-scroll-wrapper.show .login-profile-link {
         top: 0;
+    }
+}
+
+// dot chain styles
+body.homepage {
+    .dot-chain {
+        position: absolute;
+
+        background-image: url(/assets/images/dot-chain-dot.png);
+        background-position: center;
+        background-repeat: no-repeat space;
     }
 }
