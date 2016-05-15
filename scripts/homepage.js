@@ -37,7 +37,7 @@ $(document).ready(function () {
 
             centerX -= $siteWrapper.offset().left;
             sectionStartBottom -= $siteWrapper.offset().top;
-            sectionEndTop = $siteWrapper.offset().top;
+            sectionEndTop -= $siteWrapper.offset().top;
 
             $dotChainElement.css({
                 top: sectionStartBottom + 'px',
