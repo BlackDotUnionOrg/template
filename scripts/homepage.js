@@ -37,7 +37,7 @@ $(document).ready(function () {
                 top: sectionStartBottom + 'px',
                 left: (centerX - (dotChainWidth / 2)) + 'px',
                 bottom: sectionEndTop + 'px',
-                right: (centerX + (dotChainWidth / 2)) + 'px'
+                width: dotChainWidth + 'px'
             });
         });
     }
