@@ -63,7 +63,7 @@ $(document).ready(function () {
 
         var newColumnsWidth = columnsWidth / $columns.length;
         $columns.each(function () {
-            $(this).css('width', columnsWidth).addClass('membership-options-block');
+            $(this).css('width', newColumnsWidth).addClass('membership-options-block');
         });
     }
 });
