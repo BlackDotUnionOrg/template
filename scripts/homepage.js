@@ -57,12 +57,12 @@ $(document).ready(function () {
                 });
 
         var columnsWidth = 0;
-        $columns.forEach(function () {
+        $columns.each(function () {
             columnsWidth += $(this).outerWidth();
         });
 
         var newColumnsWidth = columnsWidth / $columns.length;
-        $columns.forEach(function () {
+        $columns.each(function () {
             $(this).css('width', columnsWidth).addClass('membership-options-block');
         });
     }
