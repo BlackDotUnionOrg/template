@@ -9,4 +9,7 @@ $(document).ready(function () {
     // add the meet-the-founders class to the column containing the .meet-the-founders-bgnd code block
     $('.meet-the-founders-bgnd').closest('.col').addClass('meet-the-founders');
 
+    // add the membership-options-row to the row containing the membership option columns
+    $('.membership-option-blocks-mark').closest('.row').addClass('membership-options-row');
+
 });
