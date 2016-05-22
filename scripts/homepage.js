@@ -5,8 +5,9 @@ $(document).ready(function () {
     });
 
     addDotChainSectionConnectors();
-
     $(window).on('resize', addDotChainSectionConnectors);
+
+    sizeMembershipOptionBlocks();
 
     function addDotChainSectionConnectors() {
         var dotChainWidth = 18,
@@ -45,6 +46,24 @@ $(document).ready(function () {
                 height: (sectionEndTop - sectionStartBottom) + 'px',
                 width: dotChainWidth + 'px'
             });
+        });
+    }
+
+    function sizeMembershipOptionBlocks() {
+        var $row = $('.membership-options-row'),
+            $columns = $row.children()
+                .filter(function () {
+                    return $(this).find('.sqs-block-html').length > 0;
+                });
+
+        var columnsWidth = 0;
+        $columns.forEach(function () {
+            columnsWidth += $(this).outerWidth();
+        });
+
+        var newColumnsWidth = columnsWidth / $columns.length;
+        $columns.forEach(function () {
+            $(this).css('width', columnsWidth).addClass('membership-options-block');
         });
     }
 });
