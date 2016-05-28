@@ -235,17 +235,18 @@ if (MEMBERS_DIR_TEST) {
         }
 
         function centerAvatarImages() {
-            console.log("HERE");
             $('#members .avatar').each(function () {
-                console.log("IN HERE");
                 var image = $(this).find('img'),
                     height = image.height(),
-                    aspectRatio = image.naturalWidth / image.naturalHeight,
+                    aspectRatio = image[0].naturalWidth / image[0].naturalHeight,
                     width = height * aspectRatio,
                     containerWidth = image.parent().width(),
 
                     centeredLeftDelta = (width - containerWidth) / 2;
-
+                    console.log(aspectRatio);
+                    console.log(width);
+                    console.log(containerWidth);
+console.log(centeredLeftDelta);
                 image.css('left', (-1 * centeredLeftDelta) + 'px');
             });
         }
