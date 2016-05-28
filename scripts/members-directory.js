@@ -180,7 +180,7 @@ if (MEMBERS_DIR_TEST) {
             + '        <h2 class="name">{{ name }}</h2>'
             + '        <h2 class="title">{{ professional_title }}</h2>'
             + ''
-            + '        <p class="description">{{ description }}</p>'
+            + '        <div class="description-container"><p class="description">{{ description }}</p></div>'
             + ''
             + '        <section class="skills">'
             + '            <h2>Skills</h2>'
