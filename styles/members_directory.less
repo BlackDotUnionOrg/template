@@ -332,6 +332,10 @@
     border-bottom-width:0;
     min-height: 38px;
 
+    // in order for multi line ellipsizing to work, we have to transfer padding bottom to margin bottom
+    padding-bottom: 0;
+    margin-bottom: 49px;
+
     .multiLineEllipsis(1.4em, 2);
 }
 
