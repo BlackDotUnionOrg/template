@@ -360,7 +360,7 @@ if (MEMBERS_DIR_TEST) {
 
         function affixMemberFiltersWhenScrollingPast() {
             var $memberFilters = $('#member-filters'),
-                $originalPlace = $memberFiltersSpacer.hasClass('active') ? $memberFiltersSpacer : $memberFilters;
+                $originalPlace = $('#member-filters-spacer');
 
             if ($(window).scrollTop() > $originalPlace.offset().top) { // start scrolling
                 $memberFilters
