@@ -363,12 +363,14 @@ if (MEMBERS_DIR_TEST) {
                 $originalPlace = $('#member-filters-spacer');
 
             if ($(window).scrollTop() > $originalPlace.offset().top) { // start scrolling
-                $memberFilters
-                    .css({width: $memberFilters.width()})
-                    .addClass('fixed');
+                // only add width once so we don't needlessly trigger re-rendering of the svg background
+                if ($memberFilters.attr('style').indexOf('width') !== -1) {
+                    $memberFilters.css({width: $memberFilters.width()})
+                }
+
+                $memberFilters.addClass('fixed');
             } else { // stop scrolling
-                $memberFilters
-                    .removeClass('fixed');
+                $memberFilters.removeClass('fixed');
             }
         }
 
