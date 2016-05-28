@@ -235,7 +235,9 @@ if (MEMBERS_DIR_TEST) {
         }
 
         function centerAvatarImages() {
+            console.log("HERE");
             $('#members .avatar').each(function () {
+                console.log("IN HERE");
                 var image = $(this).find('img'),
                     height = image.height(),
                     aspectRatio = image.naturalWidth / image.naturalHeight,
