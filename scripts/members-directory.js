@@ -360,25 +360,15 @@ if (MEMBERS_DIR_TEST) {
 
         function affixMemberFiltersWhenScrollingPast() {
             var $memberFilters = $('#member-filters'),
-                $memberFiltersSpacer = $('#member-filters-spacer'),
                 $originalPlace = $memberFiltersSpacer.hasClass('active') ? $memberFiltersSpacer : $memberFilters;
 
             if ($(window).scrollTop() > $originalPlace.offset().top) { // start scrolling
-                $memberFiltersSpacer
-                .css({width: $memberFilters.width(), height: $memberFilters.height()})
-                .addClass('active');
-
                 $memberFilters
-                .css({width: $memberFilters.width(), height: $memberFilters.height()})
-                .addClass('fixed');
+                    .css({width: $memberFilters.width()})
+                    .addClass('fixed');
             } else { // stop scrolling
-                $memberFiltersSpacer
-                .removeAttr('style')
-                .removeClass('active');
-
                 $memberFilters
-                .removeAttr('style')
-                .removeClass('fixed');
+                    .removeClass('fixed');
             }
         }
 
