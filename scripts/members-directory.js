@@ -364,7 +364,6 @@ if (MEMBERS_DIR_TEST) {
 
             if ($(window).scrollTop() > $originalPlace.offset().top) { // start scrolling
                 $memberFilters
-                    .css({width: $memberFilters.width() + 'px'})
                     .addClass('fixed');
             } else { // stop scrolling
                 $memberFilters
