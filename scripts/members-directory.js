@@ -243,10 +243,9 @@ if (MEMBERS_DIR_TEST) {
                     containerWidth = image.parent().width(),
 
                     centeredLeftDelta = (width - containerWidth) / 2;
-                    console.log(aspectRatio);
-                    console.log(width);
-                    console.log(containerWidth);
-console.log(centeredLeftDelta);
+                    console.log(image[0]);
+                    console.log(image[0].naturalWidth);
+                    console.log( image[0].naturalHeight);
                 image.css('left', (-1 * centeredLeftDelta) + 'px');
             });
         }
