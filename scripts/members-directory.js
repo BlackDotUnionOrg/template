@@ -241,6 +241,7 @@ if (MEMBERS_DIR_TEST) {
             });
 
             function centerImageInParent() {
+                console.log(this);
                 var image = $(this),
                     height = image.height(),
                     aspectRatio = image[0].naturalWidth / image[0].naturalHeight,
