@@ -365,7 +365,7 @@ if (MEMBERS_DIR_TEST) {
             if ($(window).scrollTop() > $originalPlace.offset().top) { // start scrolling
                 // only add width once so we don't needlessly trigger re-rendering of the svg background
                 var style = $memberFilters.attr('style');
-                if (!style || style.indexOf('width') !== -1) {
+                if (!style || style.indexOf('width') == -1) {
                     $memberFilters.css({width: $memberFilters.width()})
                 }
 
