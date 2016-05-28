@@ -236,18 +236,21 @@ if (MEMBERS_DIR_TEST) {
 
         function centerAvatarImages() {
             $('#members .avatar').each(function () {
-                var image = $(this).find('img'),
+                var image = $(this).find('img');
+                image.on('load', centerImageInParent);
+            });
+
+            function centerImageInParent() {
+                var image = $(this),
                     height = image.height(),
                     aspectRatio = image[0].naturalWidth / image[0].naturalHeight,
                     width = height * aspectRatio,
                     containerWidth = image.parent().width(),
 
                     centeredLeftDelta = (width - containerWidth) / 2;
-                    console.log(image[0]);
-                    console.log(image[0].naturalWidth);
-                    console.log( image[0].naturalHeight);
+
                 image.css('left', (-1 * centeredLeftDelta) + 'px');
-            });
+            }
         }
 
         function normalizeMembersData(data) {
