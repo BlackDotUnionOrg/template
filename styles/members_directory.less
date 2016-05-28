@@ -199,12 +199,17 @@
     float:right;
 }
 
-.member > .member-info p.description {
-    clear: both;
-    margin: 20px 9% 17px 9%;
-    padding-bottom:32px;
+.member > .member-info {
+    > .description-container {
+        clear: both;
+    }
 
-    border-bottom: 1px solid #e5e5e5;
+    p.description {
+        margin: 20px 9% 17px 9%;
+        padding-bottom:32px;
+
+        border-bottom: 1px solid #e5e5e5;
+    }
 }
 
 .member > .member-info li {
