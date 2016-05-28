@@ -293,23 +293,23 @@
     padding-left: 0;
 }
 
-.member .avatar {
-    position:absolute;
-    top: -22px;
-    right: -33px;
-    border-radius: 50%;
+.member {
+    .avatar {
+        position:absolute;
+        top: -22px;
+        right: -33px;
+        border-radius: 50%;
 
-    border:1px solid #979797;
-    width:190px;
-    height:190px;
-}
+        border:1px solid #979797;
+        width:190px;
+        height:190px;
+        overflow: hidden;
 
-.member .avatar {
-    overflow: hidden;
-}
-
-.member .avatar img {
-    height:190px;
+        img {
+            height:190px;
+            max-width: auto;
+        }
+    }
 }
 
 /* membership list view overrides */

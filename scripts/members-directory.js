@@ -230,6 +230,22 @@ if (MEMBERS_DIR_TEST) {
 
             var output = Mustache.render(template, {members: displayedMembers});
             $('#members').html(output);
+
+            centerAvatarImages();
+        }
+
+        function centerAvatarImages() {
+            $('#members .avatar').each(function () {
+                var image = $(this).find('img'),
+                    height = image.height(),
+                    aspectRatio = image.naturalWidth / image.naturalHeight,
+                    width = height * aspectRatio,
+                    containerWidth = image.parent().width(),
+
+                    centeredLeftDelta = (width - containerWidth) / 2;
+
+                image.css('left', (-1 * centeredLeftDelta) + 'px');
+            });
         }
 
         function normalizeMembersData(data) {
