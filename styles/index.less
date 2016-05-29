@@ -415,7 +415,7 @@ body.sqs-edit-mode #headerNav {
         clear: none; // necessary if an element above has float, otherwise rows will no longer align
     }
 
-    .sqs-block:not(.sqs-block-gallery,.homepage-event-brite) {
+    .sqs-block:not(.sqs-block-gallery):not(.homepage-event-brite) {
         // the z-index for elements that overlap w/ the gallery padding must be higher than
         // the z-index for the galler, otherwise they may not be shown
         z-index: 1001 !important;
