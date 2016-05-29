@@ -12,4 +12,7 @@ $(document).ready(function () {
     // add the membership-options-row to the row containing the membership option columns
     $('.membership-option-blocks-mark').closest('.row').addClass('membership-options-row');
 
+    // add the homepage-event-brite class to the block containing the eventbrite widget on the homepage
+    $('.homepage-event-brite-marker').closest('.sqs-block').addClass('homepage-event-brite');
+
 });
