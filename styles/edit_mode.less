@@ -4,3 +4,11 @@ body.sqs-edit-mode {
     display: none;
   }
 }
+
+body.sqs-edit-mode-active {
+  // don't show the meet the founders background circle as black when actively editing,
+  // since the meet the founders text cannot be styled white in active edit mode.
+  .meet-the-founders-bgnd {
+    background-color: #d3d3d3 !important;
+  }
+}
