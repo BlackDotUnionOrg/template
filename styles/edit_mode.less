@@ -3,6 +3,12 @@ body.sqs-edit-mode {
   .sqs-surrounding-overlay {
     display: none;
   }
+
+  // hide scrolling header in edit mode, otherwise trying to edit index secionts
+  // will be very annoying
+  &.homepage .show-on-scroll-wrapper.show #header {
+    display: none;
+  }
 }
 
 body.sqs-edit-mode-active {
