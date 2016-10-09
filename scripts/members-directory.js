@@ -1,4 +1,4 @@
-var MEMBERS_DIR_TEST = true;
+var MEMBERS_DIR_TEST = false;
 if (MEMBERS_DIR_TEST) {
     window.userobj = {
         "userid":"9999",
