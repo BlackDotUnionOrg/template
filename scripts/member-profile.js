@@ -1,5 +1,9 @@
 // change the login/signup link to say 'Hello, user' if the user is logged in
 $(document).on('gopaywall:loaded', function () {
+    if (!window.userobj || !window.userobj.user_data) {
+        return;
+    }
+
     var firstName = window.userobj.user_data.username.replace(/^\s+|\s+$/g, '').split(/\s+/)[0];
     $('.login-profile-link')
         .html($('<span>').text('Hello ' + firstName));

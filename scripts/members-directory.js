@@ -95,6 +95,10 @@ if (MEMBERS_DIR_TEST) {
         }
 
         function setCurrentUserName() {
+            if (!userobj.user_data) {
+                return;
+            }
+
             var firstName = userobj.user_data.name.split(/\s+/)[0];
             $('.current-user-fname').each(function () {
                 $(this).text(firstName);
@@ -135,7 +139,7 @@ if (MEMBERS_DIR_TEST) {
 
             if (MEMBERS_DIR_TEST) {
                 params.test = 1;
-            } else {
+            } else if (userobj.user_data) {
                 params.user = userobj.user_data.username;
                 params.auth_key = makeAuthKey();
             }
