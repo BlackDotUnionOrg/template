@@ -289,7 +289,7 @@ if (MEMBERS_DIR_TEST) {
             data.forEach(function (member) {
                 var link = document.createElement('a');
 
-                Object.keys(member).forEach(function (fieldName) {
+                Object.keys(defaultMemberValues).forEach(function (fieldName) {
                   member[fieldName] = member[fieldName] || defaultMemberValues[fieldName];
                 });
 
