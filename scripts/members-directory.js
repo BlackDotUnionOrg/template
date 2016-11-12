@@ -23,6 +23,25 @@ if (MEMBERS_DIR_TEST) {
 }
 
 (function () {
+    var defaultMemberValues = {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "professional_title": "",
+      "description": "",
+      "skills": [],
+      "interests": [],
+      "phone_number": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "linkedin": "",
+      "email": "",
+      "avatar": "",
+      "websites": [],
+      "membership_id": null
+    };
+
     $(document).on('gopaywall:loaded', setUpMembersDirectory);
 
     function setUpMembersDirectory() {
@@ -262,6 +281,10 @@ if (MEMBERS_DIR_TEST) {
 
             data.forEach(function (member) {
                 var link = document.createElement('a');
+
+                Object.keys(member).forEach(function (fieldName) {
+                  member[fieldName] = member[fieldName] || defaultMemberValues[fieldName];
+                });
 
                 // set whole name
                 member.name = member.first_name + " " + member.middle_name + " " + member.last_name;
