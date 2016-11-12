@@ -15,7 +15,8 @@
     "webdriverio": "^4.2.5"
   },
   "scripts": {
-    "test": "mocha --require co-mocha ./test/*.spec.js"
+    "test": "mocha --require co-mocha ./test/*.spec.js",
+    "start-dev": "squarespace-server https://benaka-moorthi.squarespace.com"
   },
   "repository": {
     "type": "git",
