@@ -48,7 +48,7 @@ if (MEMBERS_DIR_TEST) {
         if (!$('#members-directory').length) {
             return; // this is not the members page, so do nothing
         }
-
+console.log('setting up');
         var memberSortCompares = {
             name: function (a, b) {
                 return compareValues(a.name, b.name);
