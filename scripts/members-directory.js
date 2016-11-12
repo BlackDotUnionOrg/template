@@ -44,11 +44,18 @@ if (MEMBERS_DIR_TEST) {
 
     $(document).on('gopaywall:loaded', setUpMembersDirectory);
 
+    var membersDirectorySetUp = false;
     function setUpMembersDirectory() {
         if (!$('#members-directory').length) {
             return; // this is not the members page, so do nothing
         }
-console.log('setting up');
+
+        if (membersDirectorySetUp) { // don't setup members directory more than once
+          return;
+        }
+
+        membersDirectorySetUp = true;
+
         var memberSortCompares = {
             name: function (a, b) {
                 return compareValues(a.name, b.name);
